@@ -1,0 +1,9 @@
+services:
+  avax_bot:
+    build: .
+    container_name: avax_bot
+    restart: unless-stopped
+    env_file:
+      - .env
+    volumes:
+      - ./trade_history.csv:/app/trade_history.csv
